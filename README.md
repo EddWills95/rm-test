@@ -6,8 +6,8 @@ N.B.
 - Some of the images no longer seem to work in the responses from the API
 
 For reviewer: 
-    - This felt much more about how enzyme works than how my general react proficiency. Fetching data was simple and initial started with useSWR but spent a long time understanding how enzyme renders (I haven't used it in years). This was an invaluable stackoverflow answer: https://stackoverflow.com/a/58671975 
-    - Enzyme has some real problems with useEffect (i'm not even sure if they've overcome this yet) which forces you to use a `mount` over the `shallow`
+- This felt much more about how enzyme works than how my general react proficiency. Fetching data was simple and initial started with useSWR but spent a long time understanding how enzyme renders (I haven't used it in years). This was an invaluable stackoverflow answer: https://stackoverflow.com/a/58671975 
+- Enzyme has some real problems with useEffect (i'm not even sure if they've overcome this yet) which forces you to use a `mount` over the `shallow`
 
 TODO:
 - [x] In the PropertyListing component you will see that 5 property cards are rendered using hard coded data
