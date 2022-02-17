@@ -8,8 +8,7 @@
     "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "^3.1.0",
-    "swr": "^1.2.1"
+    "react-scripts": "^3.1.0"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
