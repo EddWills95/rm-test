@@ -1,25 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropertyCard from "../PropertyCard";
 import "./PropertyListing.scss";
 
-import useSWR from "swr";
-
 const API_URL = "http://localhost:3000/api/properties";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
 const PropertyListing = () => {
-  const { data, error } = useSWR(API_URL, fetcher);
+  const [properties, setProperties] = useState(undefined);
 
-  if (error) return <h1>Sorry, there has been an error fetching properties</h1>;
-  if (!data) return <h1>Loading...</h1>;
+  useEffect(() => {
+    const fetchProperties = async () => {
+      const response = await fetch(API_URL);
+      const results = await response.json();
+      setProperties(results);
+    };
+    fetchProperties();
+  }, []);
 
-  // Could really do with some pagination for performance
+  if (!properties) return null;
 
   return (
     <div className="PropertyListing">
-      {data.map((property, index) => (
-        <PropertyCard key={index} {...property} />
+      {properties.map((property, index) => (
+        <div className="something" key={index}>
+          <PropertyCard data-testid="property-card" key={index} {...property} />
+        </div>
       ))}
     </div>
   );
