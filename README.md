@@ -1,14 +1,18 @@
 FED Test
 ========
 
-N.B. Had to use node version v14.18.2 in order to successfully build node-sass on M1 macs
+N.B. 
+- Had to use node version v14.18.2 in order to successfully build node-sass on M1 macs
+- Some of the images no longer seem to work in the responses from the API
+
+For reviewer: 
+    - This felt much more about how enzyme works than how my general react proficiency. Fetching data was simple and initial started with useSWR but spent a long time understanding how enzyme renders (I haven't used it in years). This was an invaluable stackoverflow answer: https://stackoverflow.com/a/58671975 
+    - Enzyme has some real problems with useEffect (i'm not even sure if they've overcome this yet) which forces you to use a `mount` over the `shallow`
 
 TODO:
 - [x] In the PropertyListing component you will see that 5 property cards are rendered using hard coded data
 - [x] Replace the hard coded data with all of the properties returned using the /api/properties endpoint (details in the Readme).
 - [x] Resolve any failing tests
-    - As a bit of feedback for a test. This felt much more about how enzyme works than how my general react proficiency
-    - Enzyme has some real problems with useEffect (i'm not even sure if they've overcome this yet)
 - [x] When this is complete and you are happy with the code, please stop and commit your work. Do not add any other features.
 
 ## Instructions
