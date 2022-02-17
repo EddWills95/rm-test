@@ -1,6 +1,14 @@
 FED Test
 ========
 
+N.B. Had to use node version v14.18.2 in order to successfully build node-sass on M1 macs
+
+TODO:
+- In the PropertyListing component you will see that 5 property cards are rendered using hard coded data
+- Replace the hard coded data with all of the properties returned using the /api/properties endpoint (details in the Readme).
+- Resolve any failing tests
+- When this is complete and you are happy with the code, please stop and commit your work. Do not add any other features.
+
 ## Instructions
 
 Install required dependencies by running `npm ci`. Then start the project by running `npm start`.
