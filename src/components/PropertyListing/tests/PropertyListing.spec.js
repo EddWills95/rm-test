@@ -49,10 +49,9 @@ describe("PropertyListing", () => {
 
     const wrapper = mount(<PropertyListing />);
     await act(async () => {
-      await Promise.resolve(wrapper);
-      await new Promise((resolve) => setImmediate(resolve));
-      wrapper.update();
+      await Promise.resolve();
     });
+    wrapper.update();
 
     expect(wrapper.containsMatchingElement(<PropertyCard />)).toEqual(true);
   });

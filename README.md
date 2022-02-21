@@ -9,10 +9,10 @@ N.B.
 - Spent majority of my time looking up how enzyme works more than integrating the feature
 - Fetching data was simple and initially started with useSWR 
 - Moved back to Node as I got bogged down in the testing aspect
-- Spent a long time understanding how enzyme renders (I haven't used it in years) 
-    - This was an invaluable stackoverflow answer: https://stackoverflow.com/a/58671975 
-    - The mount returns a promise which we can await until everything is finished (the useEffect and mockedFetch) and correctly rendered
-- Enzyme has some real problems with useEffect (i'm not even sure if they've overcome this yet) which forces you to use a `mount` over the `shallow`
+- Spent a long time understanding how enzyme async renders (I haven't used it in years) 
+    - This was an invaluable stackoverflow answer: https://stackoverflow.com/a/58671975
+    - Ultimately it's about waiting for the event loop
+- Enzyme has some problems with useEffect (i'm not even sure if they've overcome this yet) which forces you to use a `mount` over the `shallow`
 
 
 TODO:
